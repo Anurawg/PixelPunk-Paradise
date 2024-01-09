@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>C Programming Course</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>C Programming Course</h1>
+    <nav>
+      <ul class="navbar">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cplusplus_course.html">C++ Course</a></li>
+        <li><a href="python_course.html">Python Course</a></li>
+        <li><a href="java_course.html">Java Course</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="introduction">
+      <h2>Introduction to C Programming</h2>
+      <p>Overview of C, setting up the environment, basic structure, comments, variables, and data types.</p>
+      <p>
+        C programming stands as one of the foundational languages in the world of computer programming. Developed by Dennis Ritchie in the early 1970s at Bell Labs, C was designed for system programming and has since become an essential language for software development across various domains.
+      </p>
+      <p>
+        Known for its simplicity, efficiency, and versatility, C serves as a stepping stone for beginners entering the realm of coding. Its syntax and constructs, while minimalistic, lay a robust groundwork for understanding fundamental programming concepts that apply across diverse languages. C's influence resonates in modern programming languages like C++, Java, and Python, making it a valuable language to grasp for aspiring programmers.
+      </p>
+      <p>
+        At its core, C empowers developers to manipulate memory directly, providing unparalleled control over hardware resources. Its close-to-the-machine approach makes it an ideal choice for building operating systems, compilers, device drivers, and embedded systems. Additionally, C's extensive standard library furnishes a wealth of functions to perform various tasks, from handling I/O operations to mathematical computations.
+      </p>
+      <p>
+        One of C's distinguishing features is its ability to strike a balance between high-level and low-level programming paradigms. With features facilitating structured programming, procedural abstraction, and modular design, C encourages a disciplined coding approach while allowing close interaction with hardware through pointers and memory management.
+      </p>
+      <p>
+        Understanding C involves delving into key concepts like data types, variables, control structures, functions, pointers, and file handling. Mastery of these elements enables programmers to craft efficient algorithms, manage memory effectively, and develop robust software solutions.
+      </p>
+      <p>
+        Moreover, C programming nurtures problem-solving skills by encouraging logical thinking and algorithmic design. As individuals dive into coding with C, they cultivate an analytical mindset, honing their ability to break down complex problems into manageable components—a skill transferrable across various disciplines.
+      </p>
+      <p>
+        In essence, learning C programming serves as an enlightening journey, equipping enthusiasts with a solid foundation in software development and fostering a deeper appreciation for the intricate workings of computers and software systems.
+      </p>
+    </section>
+
+    <section id="control-structures">
+      <h2>Control Structures</h2>
+      <p>Decision making, looping, break, continue, if-else, for, while, do-while.</p>
+      <p>
+        Control structures in C are constructs that dictate the flow of program execution based on certain conditions. These structures enable programmers to make decisions, perform repetitive tasks, and manage the flow of their code. The primary control structures in C include the <code>if</code>, <code>else</code>, <code>switch</code>, <code>for</code>, <code>while</code>, and <code>do-while</code> statements.
+      </p>
+      <p>
+        The <code>if</code> statement is a fundamental decision-making structure in C. It evaluates a condition and executes a block of code if the condition is true. An optional <code>else</code> block can be included to handle cases when the condition is false. Here's a basic example:
+      </p>
+      <pre>
+        <code>
+          #include &lt;stdio.h&gt;
+  
+          int main() {
+              int num = 10;
+  
+              if (num > 0) {
+                  printf("Number is positive\n");
+              } else {
+                  printf("Number is not positive\n");
+              }
+  
+              return 0;
+          }
+        </code>
+      </pre>
+      <p>
+        In this example, the program checks if the variable <code>num</code> is greater than zero. If the condition (<code>num > 0</code>) is true, it prints "Number is positive." Otherwise, it executes the code inside the <code>else</code> block, printing "Number is not positive."
+      </p>
+      <p>
+        Another crucial control structure is the <code>switch</code> statement, which allows the program to select among multiple alternatives based on the value of an expression. It provides a cleaner alternative to multiple <code>if-else</code> statements when comparing a single value against several cases. Here's a simple illustration:
+      </p>
+      <pre>
+        <code>
+          #include &lt;stdio.h&gt;
+  
+          int main() {
+              char grade = 'B';
+  
+              switch (grade) {
+                  case 'A':
+                      printf("Excellent\n");
+                      break;
+                  case 'B':
+                      printf("Good\n");
+                      break;
+                  case 'C':
+                      printf("Fair\n");
+                      break;
+                  default:
+                      printf("Invalid grade\n");
+              }
+  
+              return 0;
+          }
+        </code>
+      </pre>
+      <p>
+        In this case, if the variable <code>grade</code> holds the value 'B', the program prints "Good." If <code>grade</code> contains any other value not specified in the cases (e.g., 'D', 'E', etc.), the <code>default</code> case is executed, printing "Invalid grade."
+      </p>
+    </section>
+
+    <section id="functions">
+      <h2>Functions</h2>
+      <p>Function declaration, definition, parameters, return values, recursion.</p>
+      <p>
+        Functions in C are reusable blocks of code that perform a specific task. They encapsulate functionality, allowing for a modular and organized approach to programming. Functions help in breaking down a program into smaller, manageable parts, enhancing readability, reusability, and maintainability.
+      </p>
+      <p>
+        In C, a function typically consists of a function declaration and a function definition. The function declaration, also known as the function prototype, specifies the function's name, return type, and parameters (if any). The function definition contains the actual code that performs the task defined by the function.
+      </p>
+      <p>
+        Here is an example of a simple function that calculates the square of a number:
+      </p>
+      <pre>
+        <code>
+          #include &lt;stdio.h&gt;
+  
+          // Function prototype (declaration)
+          int square(int num);
+  
+          int main() {
+              int number = 5;
+              int result = square(number); // Function call
+  
+              printf("Square of %d is %d\n", number, result);
+  
+              return 0;
+          }
+  
+          // Function definition
+          int square(int num) {
+              return num * num;
+          }
+        </code>
+      </pre>
+      <p>
+        In this example, the function <code>square</code> takes an integer argument <code>num</code> and returns its square. The function prototype is declared before the <code>main</code> function to inform the compiler about the function's existence and its signature. The function is then defined below the <code>main</code> function.
+      </p>
+      <p>
+        Functions can have parameters (inputs) and a return type (output). The return type specifies the type of value the function will return after execution. Functions can be of various types, such as void (no return value), int, float, char, etc., depending on the data they handle and the result they produce.
+      </p>
+      <p>
+        Additionally, functions can have multiple parameters or no parameters at all. They provide a way to structure code logically, promote reusability, and simplify debugging by isolating specific tasks into individual units.
+      </p>
+      <p>
+        It's essential to call (invoke) a function in the main program to execute its code and obtain the desired output. Functions can be called multiple times from different parts of the program, enhancing code modularity and efficiency by reducing redundancy.
+      </p>
+      <p>
+        In summary, functions serve as building blocks in C programming, aiding in code organization, abstraction, and maintainability. By breaking down tasks into smaller functional units, developers can create more structured, manageable, and efficient programs.
+      </p>
+    </section>
+
+    <section id="pointers">
+      <h2>Pointers</h2>
+      <p>Pointer basics, pointer arithmetic, pointers and arrays, dynamic memory allocation.</p>
+      <p>
+        Pointers in C are variables that store memory addresses. They "point" to the location of another variable in memory. Understanding pointers is crucial in C programming as they provide a way to directly interact with memory, enabling efficient memory management and manipulation.
+      </p>
+      <p>
+        Declaring a pointer involves specifying the data type it points to, followed by an asterisk (*). For instance, to declare a pointer to an integer variable, the syntax would be <code>int *ptr;</code> Here, <code>ptr</code> is the name of the pointer variable that can hold the address of an integer variable.
+      </p>
+      <p>
+        Here is a simple example illustrating pointer usage:
+      </p>
+      <pre>
+        <code>
+          #include &lt;stdio.h&gt;
+  
+          int main() {
+              int num = 10;
+              int *ptr; // Pointer declaration
+  
+              ptr = &num; // Assigning address of num to ptr
+  
+              printf("Value of num: %d\n", num);
+              printf("Address of num: %p\n", &num);
+              printf("Value pointed to by ptr: %d\n", *ptr);
+              printf("Address stored in ptr: %p\n", ptr);
+  
+              return 0;
+          }
+        </code>
+      </pre>
+      <p>
+        In this example, a pointer <code>ptr</code> is declared to store the address of an integer variable <code>num</code>. The <code>&</code> operator is used to obtain the address of <code>num</code>, which is then assigned to <code>ptr</code>. The <code>*</code> operator is used to dereference the pointer, accessing the value stored at the address it points to.
+      </p>
+      <p>
+        Pointers facilitate dynamic memory allocation, enabling programs to allocate memory at runtime and deallocate it when no longer needed. Functions like <code>malloc()</code> and <code>free()</code> are used for dynamic memory management in C, allowing for efficient utilization of memory resources.
+      </p>
+      <p>
+        Moreover, pointers are integral in various advanced programming concepts, such as arrays, strings, and data structures like linked lists, where direct memory manipulation is essential for efficient data handling and manipulation.
+      </p>
+      <p>
+        However, improper use of pointers can lead to memory leaks, segmentation faults, and other runtime errors. It's crucial to handle pointers with care, ensuring proper initialization, referencing valid memory locations, and avoiding accessing unallocated memory.
+      </p>
+      <p>
+        In summary, pointers are powerful tools in C programming, providing direct access to memory locations and enabling efficient memory management. Understanding their concepts and proper usage is fundamental to writing efficient and robust C programs.
+      </p>
+    </section>
+
+    <section id="file-handling">
+      <h2>File Handling</h2>
+      <p>Opening, reading, writing, and closing files, file pointers.</p>
+      <p>
+        File handling in C involves operations related to reading from and writing to files. It allows programs to interact with files on the system, enabling data storage, retrieval, and manipulation. File handling is crucial for storing persistent data, such as configuration files, text documents, databases, etc.
+      </p>
+      <p>
+        The <code>stdio.h</code> header in C provides functions and data types necessary for file handling operations. The fundamental data type used for file handling is <code>FILE</code>, which represents a file stream and is used to declare file pointers.
+      </p>
+      <p>
+        Opening a file in C requires the use of the <code>fopen()</code> function, which takes two arguments: the file name or path and the mode in which the file will be opened (e.g., read, write, append, etc.). Here's an example:
+      </p>
+      <pre>
+        <code>
+          #include &lt;stdio.h&gt;
+  
+          int main() {
+              FILE *filePointer;
+              char data[100];
+  
+              // Opening a file in write mode
+              filePointer = fopen("example.txt", "w");
+  
+              if (filePointer == NULL) {
+                  printf("File cannot be opened.\n");
+                  return 1;
+              }
+  
+              printf("Enter data to write into the file:\n");
+              fgets(data, sizeof(data), stdin);
+  
+              // Writing data to the file
+              fprintf(filePointer, "%s", data);
+  
+              // Closing the file
+              fclose(filePointer);
+  
+              printf("Data written to the file successfully.\n");
+              return 0;
+          }
+        </code>
+      </pre>
+      <p>
+        In this example, the program opens a file named "example.txt" in write mode using <code>fopen()</code>. If the file opening fails, an error message is displayed. The program then prompts the user to enter data, which is written to the file using <code>fprintf()</code>. Finally, the file is closed using <code>fclose()</code>.
+      </p>
+      <p>
+        Reading from a file involves using functions like <code>fscanf()</code> or <code>fgets()</code> to extract data from the file. Here's an example demonstrating file reading:
+      </p>
+      <pre>
+        <code>
+          #include &lt;stdio.h&gt;
+  
+          int main() {
+              FILE *filePointer;
+              char data[100];
+  
+              // Opening a file in read mode
+              filePointer = fopen("example.txt", "r");
+  
+              if (filePointer == NULL) {
+                  printf("File cannot be opened.\n");
+                  return 1;
+              }
+  
+              // Reading data from the file
+              fscanf(filePointer, "%s", data); // Read single word
+              // or
+              // fgets(data, sizeof(data), filePointer); // Read entire line
+  
+              printf("Data read from the file: %s\n", data);
+  
+              // Closing the file
+              fclose(filePointer);
+  
+              return 0;
+          }
+        </code>
+      </pre>
+      <p>
+        This program opens the "example.txt" file in read mode using <code>fopen()</code>. If the file opening fails, an error message is displayed. It then reads data from the file using <code>fscanf()</code> or <code>fgets()</code>, depending on whether a single word or an entire line is being read. Finally, the file is closed using <code>fclose()</code>.
+      </p>
+      <p>
+        File handling in C also includes additional operations like appending data to existing files, seeking specific positions within files, checking for end-of-file conditions, and handling errors during file operations.
+      </p>
+      <p>
+        Handling binary files, manipulating file pointers, and understanding file modes (read, write, append, etc.) are essential aspects of file handling in C programming, empowering developers to work with external data storage effectively.
+      </p>
+      <p>
+        However, when working with files, it's critical to handle errors gracefully, close files after usage, and ensure proper permissions and file existence to avoid unexpected behaviors and security vulnerabilities.
+      </p>
+      <p>
+        In summary, file handling in C programming provides a versatile mechanism to interact with files, enabling reading, writing, and manipulating data stored externally. Mastering file handling is essential for creating robust applications that efficiently manage data storage and retrieval.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 PixelPunk Paradise</p>
+  </footer>
+</body>
+</html>

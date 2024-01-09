@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>C++ Programming Course</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>C++ Programming Course</h1>
+    <nav>
+      <ul class="navbar">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="c_course.html">C Course</a></li>
+        <li><a href="python_course.html">Python Course</a></li>
+        <li><a href="java_course.html">Java Course</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="introduction">
+      <h2>Introduction to C++</h2>
+      <p>
+        C++ is a powerful, high-performance programming language derived from C. It combines imperative, object-oriented, and generic programming features, making it versatile for various applications.
+      </p>
+      <p>
+        C++, developed by Bjarne Stroustrup in 1979 at Bell Laboratories, is an extension of the C programming language. It retains C's efficiency and provides high-level constructs for object-oriented programming (OOP), making it suitable for developing a wide range of applications, from system software to graphical applications and more.
+      </p>
+      <p>
+        C++ inherits many features from C, including its syntax, data types, and control structures. However, it introduces additional functionalities like classes, objects, inheritance, polymorphism, templates, and more, making it a versatile and powerful programming language.
+      </p>
+      <p>
+        One of the key features of C++ is its support for OOP paradigms. Classes and objects enable developers to model real-world entities, allowing for better code organization and reusability. Inheritance and polymorphism further enhance the flexibility and extensibility of code by facilitating the creation of hierarchies and enabling dynamic behavior.
+      </p>
+      <p>
+        Memory management in C++ is another notable aspect. While it offers the convenience of high-level abstractions, it also provides control over memory allocation and deallocation through pointers, giving developers the ability to work at a lower level when necessary.
+      </p>
+      <p>
+        C++ is renowned for its performance and flexibility. Its extensive standard library provides numerous pre-defined functions and data types, facilitating rapid development. Additionally, it supports both procedural and object-oriented programming paradigms, allowing developers to choose the best approach for their projects.
+      </p>
+      <p>
+        As you explore the world of C++ programming, you'll discover a language that empowers you to build efficient, robust, and scalable applications. Its combination of low-level control and high-level abstractions makes it a powerful tool for software development across various domains.
+      </p>
+    </section>
+
+    <section id="variables">
+      <h2>Variables and Data Types</h2>
+      <p>
+        C++ supports various data types, including integers, floating-point numbers, characters, arrays, and more. Understanding these types and their usage is fundamental in C++ programming.
+      </p>
+      <p>
+        In C++, variables are used to store data values. They act as named containers that hold information. Before using a variable in C++, you need to declare its type and name.
+      </p>
+      <p>
+        C++ supports various data types, such as integers, floating-point numbers, characters, booleans, arrays, and more. For example:
+      </p>
+      <pre><code>
+        int num = 10;  // Integer
+        float pi = 3.14;  // Floating-point number
+        char letter = 'A';  // Character
+        bool isTrue = true;  // Boolean
+      </code></pre>
+      <p>
+        Variable declaration in C++ involves specifying the data type followed by the variable name. You can initialize a variable upon declaration by assigning a value to it.
+      </p>
+      <p>
+        C++ allows constant variables using the 'const' keyword. Once defined, the value of a constant variable cannot be changed. For instance:
+      </p>
+      <pre><code>
+        const int MAX_VALUE = 100;
+      </code></pre>
+      <p>
+        C++ also supports variable scope, defining where a variable can be accessed. Variables can have global scope, accessible throughout the program, or local scope, confined within a specific block or function.
+      </p>
+      <p>
+        Additionally, C++ provides the concept of pointers, which store memory addresses. Pointers allow direct manipulation of memory and are used for dynamic memory allocation. For example:
+      </p>
+      <pre><code>
+        int* ptr;  // Pointer declaration
+        int value = 5;
+        ptr = &value;  // Assigning address of 'value' to pointer 'ptr'
+      </code></pre>
+      <p>
+        Understanding variable types, their scope, and memory management is crucial in C++ programming. Proper utilization of variables allows developers to efficiently store and manipulate data within their programs.
+      </p>
+    </section>
+
+    <section id="control-flow">
+      <h2>Control Flow and Loops</h2>
+      <p>
+        Control structures like 'if', 'else', 'switch', 'for', 'while', etc., allow conditional execution and looping in C++, providing flexibility in program flow.
+      </p>
+      <p>
+        Control flow in C++ refers to the order in which statements are executed in a program. C++ provides various control flow mechanisms like conditional statements and loops, enabling developers to create flexible and efficient programs.
+      </p>
+      <h2>Conditional Statements</h2>
+      <p>
+        Conditional statements, primarily 'if', 'else if' (or 'elif'), and 'else', allow the execution of specific code blocks based on certain conditions. For instance:
+      </p>
+      <pre><code>
+        int num = 10;
+  
+        if (num > 0) {
+            std::cout << "Number is positive";
+        } else if (num == 0) {
+            std::cout << "Number is zero";
+        } else {
+            std::cout << "Number is negative";
+        }
+      </code></pre>
+      <p>
+        The 'if' statement checks a condition and executes the block of code if the condition is true. 'else if' provides an alternative condition to check, while 'else' captures anything that doesn't match the previous conditions.
+      </p>
+      <h2>Switch Statement</h2>
+      <p>
+        C++ also includes the 'switch' statement, useful for handling multiple conditions based on the value of an expression. It's often used when multiple 'if' conditions are needed. For example:
+      </p>
+      <pre><code>
+        int choice = 2;
+  
+        switch (choice) {
+            case 1:
+                std::cout << "Option 1 selected";
+                break;
+            case 2:
+                std::cout << "Option 2 selected";
+                break;
+            case 3:
+                std::cout << "Option 3 selected";
+                break;
+            default:
+                std::cout << "Invalid choice";
+        }
+      </code></pre>
+      <p>
+        The 'switch' statement evaluates the 'choice' variable and executes the block of code corresponding to the matched 'case'. The 'break' statement terminates the 'switch' block.
+      </p>
+      <h2>Loops</h2>
+      <p>
+        Loops in C++ allow repetitive execution of a block of code. The 'for', 'while', and 'do-while' loops are commonly used. For example:
+      </p>
+      <pre><code>
+        // For loop
+        for (int i = 0; i < 5; ++i) {
+            std::cout << i << " ";
+        }
+  
+        // While loop
+        int j = 0;
+        while (j < 5) {
+            std::cout << j << " ";
+            j++;
+        }
+  
+        // Do-while loop
+        int k = 0;
+        do {
+            std::cout << k << " ";
+            k++;
+        } while (k < 5);
+      </code></pre>
+      <p>
+        The 'for' loop initializes a variable, checks a condition, and updates the variable in each iteration. The 'while' loop executes a block of code as long as the condition remains true. The 'do-while' loop is similar but executes the block at least once before checking the condition.
+      </p>
+      <p>
+        Control flow structures in C++ are fundamental for creating logic-driven programs. Understanding and utilizing these mechanisms allow developers to efficiently manage program flow and execute code based on specific conditions or iterations.
+      </p>
+    </section>
+
+    <section id="functions">
+      <h2>Functions and Pointers</h2>
+      <p>
+        Functions in C++ allow code modularity and reusability. Pointers, a powerful feature in C++, store memory addresses and facilitate dynamic memory allocation and manipulation.
+      </p>
+      <p>
+        Control flow in C++ refers to the order in which statements are executed in a program. C++ provides various control flow mechanisms like conditional statements and loops, enabling developers to create flexible and efficient programs.
+      </p>
+      <h2>Conditional Statements</h2>
+      <p>
+        Conditional statements, primarily 'if', 'else if' (or 'elif'), and 'else', allow the execution of specific code blocks based on certain conditions. For instance:
+      </p>
+      <pre><code>
+        int num = 10;
+  
+        if (num > 0) {
+            std::cout << "Number is positive";
+        } else if (num == 0) {
+            std::cout << "Number is zero";
+        } else {
+            std::cout << "Number is negative";
+        }
+      </code></pre>
+      <p>
+        The 'if' statement checks a condition and executes the block of code if the condition is true. 'else if' provides an alternative condition to check, while 'else' captures anything that doesn't match the previous conditions.
+      </p>
+      <h2>Switch Statement</h2>
+      <p>
+        C++ also includes the 'switch' statement, useful for handling multiple conditions based on the value of an expression. It's often used when multiple 'if' conditions are needed. For example:
+      </p>
+      <pre><code>
+        int choice = 2;
+  
+        switch (choice) {
+            case 1:
+                std::cout << "Option 1 selected";
+                break;
+            case 2:
+                std::cout << "Option 2 selected";
+                break;
+            case 3:
+                std::cout << "Option 3 selected";
+                break;
+            default:
+                std::cout << "Invalid choice";
+        }
+      </code></pre>
+      <p>
+        The 'switch' statement evaluates the 'choice' variable and executes the block of code corresponding to the matched 'case'. The 'break' statement terminates the 'switch' block.
+      </p>
+      <h2>Loops</h2>
+      <p>
+        Loops in C++ allow repetitive execution of a block of code. The 'for', 'while', and 'do-while' loops are commonly used. For example:
+      </p>
+      <pre><code>
+        // For loop
+        for (int i = 0; i < 5; ++i) {
+            std::cout << i << " ";
+        }
+  
+        // While loop
+        int j = 0;
+        while (j < 5) {
+            std::cout << j << " ";
+            j++;
+        }
+  
+        // Do-while loop
+        int k = 0;
+        do {
+            std::cout << k << " ";
+            k++;
+        } while (k < 5);
+      </code></pre>
+      <p>
+        The 'for' loop initializes a variable, checks a condition, and updates the variable in each iteration. The 'while' loop executes a block of code as long as the condition remains true. The 'do-while' loop is similar but executes the block at least once before checking the condition.
+      </p>
+      <p>
+        Control flow structures in C++ are fundamental for creating logic-driven programs. Understanding and utilizing these mechanisms allow developers to efficiently manage program flow and execute code based on specific conditions or iterations.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 PixelPunk Paradise</p>
+  </footer>
+</body>
+</html>
